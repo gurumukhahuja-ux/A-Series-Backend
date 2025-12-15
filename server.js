@@ -9,7 +9,6 @@ import agentRoutes from "./routes/agentRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import cookieParser from "cookie-parser";
 import emailVatifiation from "./routes/emailVerification.js"
-import agent from "./routes/agentRoutes.js"
  dotenv.config();
 const app = express();
 const PORT = process.env.PORT 

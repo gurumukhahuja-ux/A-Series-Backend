@@ -9,12 +9,9 @@ import agentRoutes from "./routes/agentRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import cookieParser from "cookie-parser";
 import emailVatifiation from "./routes/emailVerification.js"
-<<<<<<< HEAD
 import agent from "./routes/agentRoutes.js"
 
-=======
->>>>>>> 580465630b30999a7c357dfe68a263b8e7072f50
- dotenv.config();
+dotenv.config();
 const app = express();
 const PORT = process.env.PORT 
 // Connect to Database

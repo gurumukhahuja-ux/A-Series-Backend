@@ -5,9 +5,9 @@ import { resend, transporter } from "./Email.config.js";
 export const sendVerificationEmail=async(email,verificationCode)=>{
     try {
      const response=   await resend.emails.send({
-            from: process.env.EMAIL,
+            from:`AI-MALL <${process.env.EMAIL}>`,
             to: [email], 
-            subject: "Verify your Email", 
+            subject: "Verify Your Email", 
             html: Verification_Email_Template.replace("{verificationCode}",verificationCode)
         })
         console.log('Email send Successfully',response)
@@ -19,7 +19,7 @@ export const sendVerificationEmail=async(email,verificationCode)=>{
 // WELCOME EMAIL
 export const welcomeEmail = async (name,email) => {
   const info =await resend.emails.send({
-    from: 'verification@ai-mall.in',
+    from: `AI-MALL <${process.env.EMAIL}>`,
     to: [email],
     subject: `Welcome ${name}`,
     html: Welcome_Email_Template.replace("{name}",name), 

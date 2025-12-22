@@ -1,6 +1,6 @@
 import express from "express"
 import userModel from "../models/User.js"
-import { verifyToken } from "../middleware/Authorization.js"
+import { verifyToken } from "../middleware/authorization.js"
 const route = express.Router()
 
 route.get("/", verifyToken, async (req, res) => {

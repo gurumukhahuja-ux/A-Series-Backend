@@ -1,7 +1,7 @@
 import express from 'express'
 import agentModel from '../models/Agents.js'
 import userModel from "../models/User.js"
-import { verifyToken } from '../middleware/Authorization.js'
+import { verifyToken } from '../middleware/authorization.js'
 const route = express.Router()
 
 //get all agents

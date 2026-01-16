@@ -39,7 +39,7 @@ connectDB().then(() => {
 // Middleware
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://192.168.29.172:5173', 'http://192.168.56.1:5173'],
+  origin: true, // Allow any origin in development
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -119,4 +119,8 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
   console.log(`AI-Mall Backend running on  http://localhost:${PORT}`);
+  console.log("Razorpay Config Check:", {
+    KeyID: process.env.RAZORPAY_KEY_ID ? `${process.env.RAZORPAY_KEY_ID.substring(0, 8)}...` : "MISSING",
+    Secret: process.env.RAZORPAY_KEY_SECRET ? "PRESENT" : "MISSING"
+  });
 });

@@ -11,20 +11,30 @@ dotenv.config();
 
 const router = express.Router();
 
-const razorpay = new Razorpay({
-    key_id: process.env.RAZORPAY_KEY_ID,
-    key_secret: process.env.RAZORPAY_KEY_SECRET,
-});
+// Razorpay initialized inside routes to ensure env vars are ready
+
 
 // Create Order
 // POST /api/payments/create-order
 router.post('/create-order', verifyToken, async (req, res) => {
     try {
+        console.log("Create Order Request Body:", req.body);
         const { amount, agentId, plan } = req.body;
 
         if (!amount || !agentId) {
             return res.status(400).json({ error: 'Amount and Agent ID are required' });
         }
+
+        // Initialize Razorpay here to ensure env vars are loaded
+        if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+            console.error("Razorpay Keys Missing in Handler:", process.env.RAZORPAY_KEY_ID ? "Key ID Present" : "Key ID Missing");
+            return res.status(500).json({ error: 'Server configuration error: Razorpay keys missing' });
+        }
+
+        const razorpay = new Razorpay({
+            key_id: process.env.RAZORPAY_KEY_ID,
+            key_secret: process.env.RAZORPAY_KEY_SECRET,
+        });
 
         const options = {
             amount: amount * 100, // exact amount in paise
@@ -33,6 +43,7 @@ router.post('/create-order', verifyToken, async (req, res) => {
         };
 
         const order = await razorpay.orders.create(options);
+        console.log("Razorpay Order Created:", order);
 
         res.json({
             orderId: order.id,
@@ -42,7 +53,9 @@ router.post('/create-order', verifyToken, async (req, res) => {
         });
     } catch (err) {
         console.error('[RAZORPAY ORDER ERROR]', err);
-        res.status(500).json({ error: 'Failed to create payment order' });
+        // Return the actual error message from Razorpay if available
+        const errorMessage = err.error && err.error.description ? err.error.description : 'Failed to create payment order';
+        res.status(500).json({ error: errorMessage, details: err.message });
     }
 });
 

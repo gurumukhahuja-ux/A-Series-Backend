@@ -2365,3 +2365,353 @@ Stack: Error: [GoogleGenerativeAI Error]: Error fetching from https://generative
     at async file:///G:/AA/A-Series-Backend/routes/chatRoutes.js:103:17
 >>>>>>> b7f3ca0a19f5798dc23cd843750316dcad2f2440
 -------------------------------------------
+
+Timestamp: 2026-01-22T09:15:48.361Z
+Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:streamGenerateContent?alt=sse: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:streamGenerateContent?alt=sse: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+    at handleResponseNotOk (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async makeRequest (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContentStream (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/node_modules/@google/generative-ai/dist/index.mjs:860:22)
+    at async attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:183:31)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:192:17
+-------------------------------------------
+
+Timestamp: 2026-01-22T09:16:30.126Z
+Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:streamGenerateContent?alt=sse: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:streamGenerateContent?alt=sse: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+    at handleResponseNotOk (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/node_modules/@google/generative-ai/dist/index.mjs:432:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async makeRequest (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/node_modules/@google/generative-ai/dist/index.mjs:401:9)
+    at async generateContentStream (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/node_modules/@google/generative-ai/dist/index.mjs:860:22)
+    at async attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:183:31)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:192:17
+-------------------------------------------
+
+Timestamp: 2026-01-22T10:23:54.366Z
+Error: response.text is not a function
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: TypeError: response.text is not a function
+    at attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:187:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:192:17
+-------------------------------------------
+
+Timestamp: 2026-01-22T10:25:22.579Z
+Error: response.text is not a function
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: TypeError: response.text is not a function
+    at attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:187:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:192:17
+-------------------------------------------
+
+Timestamp: 2026-01-22T10:45:48.398Z
+Error: response.text is not a function
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: TypeError: response.text is not a function
+    at attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:187:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:192:17
+-------------------------------------------
+
+Timestamp: 2026-01-22T10:46:08.828Z
+Error: response.text is not a function
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: TypeError: response.text is not a function
+    at attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:187:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:192:17
+-------------------------------------------
+
+Timestamp: 2026-01-22T10:54:47.165Z
+Error: response.text is not a function
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: TypeError: response.text is not a function
+    at attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:187:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:192:17
+-------------------------------------------
+
+Timestamp: 2026-01-22T11:17:55.909Z
+Error: response.text is not a function
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: TypeError: response.text is not a function
+    at attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:187:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:192:17
+-------------------------------------------
+
+Timestamp: 2026-01-22T11:18:00.277Z
+Error: response.text is not a function
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: TypeError: response.text is not a function
+    at attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:187:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:192:17
+-------------------------------------------
+
+Timestamp: 2026-01-22T11:25:39.630Z
+Error: response.text is not a function
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: TypeError: response.text is not a function
+    at attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:187:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:192:17
+-------------------------------------------
+
+Timestamp: 2026-01-23T05:58:03.617Z
+Error: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: GoogleAuthError: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+    at C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\models\generative_models.js:63:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async generateContentStream (C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\functions\generate_content.js:93:16)
+    at async attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:183:31)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:204:17
+-------------------------------------------
+
+Timestamp: 2026-01-23T06:00:50.168Z
+Error: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: GoogleAuthError: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+    at C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\models\generative_models.js:63:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async generateContentStream (C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\functions\generate_content.js:93:16)
+    at async attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:183:31)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:204:17
+-------------------------------------------
+
+Timestamp: 2026-01-23T06:02:44.588Z
+Error: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: GoogleAuthError: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+    at C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\models\generative_models.js:63:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async generateContentStream (C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\functions\generate_content.js:93:16)
+    at async attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:183:31)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:204:17
+-------------------------------------------
+
+Timestamp: 2026-01-23T06:35:19.277Z
+Error: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: GoogleAuthError: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+    at C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\models\generative_models.js:63:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async generateContentStream (C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\functions\generate_content.js:93:16)
+    at async attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:183:31)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:204:17
+-------------------------------------------
+
+Timestamp: 2026-01-23T06:38:38.349Z
+Error: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: GoogleAuthError: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+    at C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\models\generative_models.js:63:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async generateContentStream (C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\functions\generate_content.js:93:16)
+    at async attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:183:31)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:204:17
+-------------------------------------------
+
+Timestamp: 2026-01-23T06:41:28.524Z
+Error: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: GoogleAuthError: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+    at C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\models\generative_models.js:63:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async generateContentStream (C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\functions\generate_content.js:93:16)
+    at async attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:183:31)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:204:17
+-------------------------------------------
+
+Timestamp: 2026-01-23T06:47:31.614Z
+Error: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: GoogleAuthError: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+    at C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\models\generative_models.js:63:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async generateContentStream (C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\functions\generate_content.js:93:16)
+    at async attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:183:31)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:204:17
+-------------------------------------------
+
+Timestamp: 2026-01-23T06:47:43.569Z
+Error: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+Code: undefined
+Env Project: ai-mall-484810
+Env Creds Path: 'undefined'
+Creds File Exists: N/A
+Stack: GoogleAuthError: [VertexAI.GoogleAuthError]: 
+Unable to authenticate your request        
+Depending on your run time environment, you can get authentication by        
+- if in local instance or cloud shell: `!gcloud auth login`        
+- if in Colab:        
+    -`from google.colab import auth`        
+    -`auth.authenticate_user()`        
+- if in service account or other: please follow guidance in https://cloud.google.com/docs/authentication
+    at C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\models\generative_models.js:63:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async generateContentStream (C:\Users\sansk\Desktop\A-Series\A-Series-Backend\node_modules\@google-cloud\vertexai\build\src\functions\generate_content.js:93:16)
+    at async attemptGeneration (file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:183:31)
+    at async file:///C:/Users/sansk/Desktop/A-Series/A-Series-Backend/routes/chatRoutes.js:204:17
+-------------------------------------------

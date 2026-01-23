@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import express from "express"
 import ChatSession from "../models/ChatSession.js"
-import { generativeModel } from "../config/gemini.js";
+import { generativeModel } from "../config/vertex.js";
 import userModel from "../models/User.js";
 import { verifyToken } from "../middleware/authorization.js";
 import { uploadToCloudinary } from "../services/cloudinary.service.js";
@@ -183,8 +183,20 @@ router.post("/", async (req, res) => {
       const streamingResult = await generativeModel.generateContentStream({ contents: [contentPayload] });
       const response = await streamingResult.response;
       console.log("--- Gemini Response ---");
-      console.log(JSON.stringify(response, null, 2));
-      return response.text();
+      // console.log(JSON.stringify(response, null, 2));
+
+      // Helper to safely extract text from Vertex AI or Gemini SDK response
+      const getText = (resp) => {
+        if (typeof resp.text === 'function') {
+          return resp.text();
+        }
+        // Fallback for Vertex AI raw JSON structure
+        return resp.candidates?.[0]?.content?.parts?.[0]?.text || "";
+      };
+
+      const text = getText(response);
+      if (!text) throw new Error("No text generated in response");
+      return text;
     };
 
     while (retryCount < maxRetries) {

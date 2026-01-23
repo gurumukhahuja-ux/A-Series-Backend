@@ -4,9 +4,7 @@ import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import mongoose from "mongoose";
 import logger from "../utils/logger.js";
 import Knowledge from "../models/Knowledge.model.js";
-import groqService from './groq.service.js';
-import { Worker } from 'worker_threads';
-import path from 'path';
+import { generativeModel } from '../config/vertex.js';
 
 // Initialize Groq Chat Model - REMOVED (Replaced by groq.service.js)
 // const model = new ChatGroq({ ... });
@@ -79,6 +77,27 @@ export const storeDocument = async (text, docId = null) => {
     }
 };
 
+// Helper: Ask Vertex AI
+const askVertex = async (prompt, context = null) => {
+    let fullPrompt = prompt;
+    if (context) {
+        fullPrompt = `${context}\n\nQuestion: ${prompt}`;
+    }
+    try {
+        const result = await generativeModel.generateContent({
+            contents: [{ role: "user", parts: [{ text: fullPrompt }] }],
+        });
+        const text = result?.response?.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (!text) {
+            throw new Error("No content generated from Vertex AI");
+        }
+        return text;
+    } catch (error) {
+        logger.error(`Vertex AI Error: ${error.message}`);
+        throw error;
+    }
+};
+
 export const chat = async (message, activeDocContent = null) => {
     try {
         if (!message || typeof message !== 'string') {
@@ -96,7 +115,7 @@ export const chat = async (message, activeDocContent = null) => {
             // Wait, we need to label it "📄 From Chat-Uploaded Document". 
             // GroqService logic uses "📄 From Your Document" generally. We might want to customize labeling.
             // For now, let's just pass context. The generic "From Your Document" fits this use case well.
-            return await groqService.askGroq(message, activeDocContent);
+            return await askVertex(message, activeDocContent);
         }
 
         // PRIORITY 2: Company Knowledge Base (RAG)
@@ -146,7 +165,7 @@ export const chat = async (message, activeDocContent = null) => {
                 contextText = "SOURCE: COMPANY KNOWLEDGE BASE\\n\\n" + contextText;
 
                 // PRIORITY 2: Answer from Company RAG
-                return await groqService.askGroq(message, contextText);
+                return await askVertex(message, contextText);
 
             } else {
                 logger.info(`[RAG] No relevant chunks found (All scores < ${THRESHOLD}). Fallback to General Knowledge.`);
@@ -155,7 +174,7 @@ export const chat = async (message, activeDocContent = null) => {
 
         // PRIORITY 3: Answer from General Knowledge (Explicit No Context)
         logger.info("[Chat Routing] Answering from General Knowledge (Groq).");
-        return await groqService.askGroq(message, null);
+        return await askVertex(message);
 
     } catch (error) {
         logger.error(`Chat Handling Error: ${error.message}`);

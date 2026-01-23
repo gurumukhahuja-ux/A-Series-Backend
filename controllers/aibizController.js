@@ -1,11 +1,13 @@
 import AIBIZHistory from "../models/AIBIZHistory.js";
-import { genAI } from "../config/gemini.js";
+import { vertexAI, HarmCategory, HarmBlockThreshold } from "../config/vertex.js";
 import mongoose from "mongoose";
 
 // Using gemini-1.5-flash as it is the standard model configured in this project
 // equivalent to gemini-2.5-flash from the original AIBIZ code if it was a typo or alias
-const bizModel = genAI.getGenerativeModel({
-    model: "gemini-2.5-flash",
+const bizModel = vertexAI.getGenerativeModel({
+    model: "gemini-1.5-flash-001",
+    safetySettings: [{ category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE }],
+    generationConfig: { maxOutputTokens: 4192 },
 });
 
 /* ------------------ Generate + Save ------------------ */
